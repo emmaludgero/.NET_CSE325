@@ -1,0 +1,15 @@
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\bin\Debug\net6.0\MyFirstConsoleApplication.exe
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\bin\Debug\net6.0\MyFirstConsoleApplication.deps.json
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\bin\Debug\net6.0\MyFirstConsoleApplication.runtimeconfig.json
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\bin\Debug\net6.0\MyFirstConsoleApplication.dll
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\bin\Debug\net6.0\MyFirstConsoleApplication.pdb
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.csproj.AssemblyReference.cache
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.AssemblyInfoInputs.cache
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.AssemblyInfo.cs
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.csproj.CoreCompileInputs.cache
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.dll
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\refint\MyFirstConsoleApplication.dll
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.pdb
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\MyFirstConsoleApplication.genruntimeconfig.cache
+C:\Users\katlu\Documents\byu-idaho\Spring2023\.NET_CSE325\MyFirstConsoleApplication\obj\Debug\net6.0\ref\MyFirstConsoleApplication.dll
