@@ -57,7 +57,6 @@ namespace MathQuiz
                 // display the new time left by updating the 
                 // Time Left label.
                 timeLeft = timeLeft - 1;
-                
                 timeLabel.Text = $"{timeLeft} seconds";
             }
             else
