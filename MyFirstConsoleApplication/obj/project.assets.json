@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\katlu\\Documents\\byu-idaho\\Spring2023\\.NET_CSE325\\MyFirstConsoleApplication\\MyFirstConsoleApplication.csproj",
+      "projectUniqueName": "C:\\Users\\katlu\\Documents\\byu-idaho\\Spring2023\\teste\\MyFirstConsoleApplication\\MyFirstConsoleApplication.csproj",
       "projectName": "MyFirstConsoleApplication",
-      "projectPath": "C:\\Users\\katlu\\Documents\\byu-idaho\\Spring2023\\.NET_CSE325\\MyFirstConsoleApplication\\MyFirstConsoleApplication.csproj",
+      "projectPath": "C:\\Users\\katlu\\Documents\\byu-idaho\\Spring2023\\teste\\MyFirstConsoleApplication\\MyFirstConsoleApplication.csproj",
       "packagesPath": "C:\\Users\\katlu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\katlu\\Documents\\byu-idaho\\Spring2023\\.NET_CSE325\\MyFirstConsoleApplication\\obj\\",
+      "outputPath": "C:\\Users\\katlu\\Documents\\byu-idaho\\Spring2023\\teste\\MyFirstConsoleApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\katlu\\AppData\\Roaming\\NuGet\\NuGet.Config",
