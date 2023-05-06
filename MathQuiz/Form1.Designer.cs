@@ -1,7 +1,85 @@
-﻿namespace MathQuiz
+﻿using System;
+
+namespace MathQuiz
 {
+
     partial class Form1
     {
+        Random randomizer = new Random();
+
+         
+        int addend1;
+        int addend2;
+        int minuend;
+        int subtrahend; 
+        int multiplicand;
+        int multiplier;
+        int dividend;
+        int divisor;
+        // This integer variable keeps track of the 
+        // remaining time.
+        int timeLeft;
+        
+        public void StartTheQuiz()
+        {
+            // Fill in the addition problem.
+            // Generate two random numbers to add.
+            // Store the values in the variables 'addend1' and 'addend2'.
+            addend1 = randomizer.Next(51);
+            addend2 = randomizer.Next(51);
+
+            // Convert the two randomly generated numbers
+            // into strings so that they can be displayed
+            // in the label controls.
+            plusLeftLabel.Text = addend1.ToString();
+            plusRightLabel.Text = addend2.ToString();
+
+            // 'sum' is the name of the NumericUpDown control.
+            // This step makes sure its value is zero before
+            // adding any values to it.
+            sum.Value = 0;
+            // Fill in the subtraction problem.
+            minuend = randomizer.Next(1, 101);
+            subtrahend = randomizer.Next(1, minuend);
+            minusLeftLabel.Text = minuend.ToString();
+            minusRightLabel.Text = subtrahend.ToString();
+            difference.Value = 0;
+
+            // Fill in the multiplication problem.
+            multiplicand = randomizer.Next(2, 11);
+            multiplier = randomizer.Next(2, 11);
+            timesLeftLabel.Text = multiplicand.ToString();
+            timesRightLabel.Text = multiplier.ToString();
+            product.Value = 0;
+
+            // Fill in the division problem.
+            divisor = randomizer.Next(2, 11);
+            int temporaryQuotient = randomizer.Next(2, 11);
+            dividend = divisor * temporaryQuotient;
+            dividedLeftLabel.Text = dividend.ToString();
+            dividedRightLabel.Text = divisor.ToString();
+            quotient.Value = 0;
+
+            // Start the timer.
+            timeLeft = 30;
+            timeLabel.Text = "30 seconds";
+            timer1.Start();
+        }
+
+        /// <summary>
+        /// Check the answers to see if the user got everything right.
+        /// </summary>
+        /// <returns>True if the answer's correct, false otherwise.</returns>
+        private bool CheckTheAnswer()
+        {
+            if ((addend1 + addend2 == sum.Value)
+                && (minuend - subtrahend == difference.Value)
+                && (multiplicand * multiplier == product.Value)
+                && (dividend / divisor == quotient.Value))
+                return true;
+            else
+                return false;
+        }
         /// <summary>
         /// Variável de designer necessária.
         /// </summary>
@@ -28,8 +106,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.timeLabel = new System.Windows.Forms.Label();
-            this.timeLeft = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.plusRightLabel = new System.Windows.Forms.Label();
@@ -52,6 +131,7 @@
             this.timesLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotient)).BeginInit();
@@ -69,15 +149,15 @@
             this.timeLabel.TabIndex = 0;
             this.timeLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // timeLeft
+            // label
             // 
-            this.timeLeft.AutoSize = true;
-            this.timeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLeft.Location = new System.Drawing.Point(165, 10);
-            this.timeLeft.Name = "timeLeft";
-            this.timeLeft.Size = new System.Drawing.Size(101, 25);
-            this.timeLeft.TabIndex = 1;
-            this.timeLeft.Text = "Time Left";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(165, 10);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(101, 25);
+            this.label.TabIndex = 1;
+            this.label.Text = "Time Left";
             // 
             // plusLeftLabel
             // 
@@ -127,6 +207,7 @@
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(100, 35);
             this.sum.TabIndex = 1;
+            this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label1
             // 
@@ -145,6 +226,7 @@
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(100, 35);
             this.difference.TabIndex = 2;
+            this.difference.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // minusLeftLabel
             // 
@@ -213,6 +295,7 @@
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(100, 35);
             this.quotient.TabIndex = 4;
+            this.quotient.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label8
             // 
@@ -231,6 +314,7 @@
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(100, 35);
             this.product.TabIndex = 3;
+            this.product.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label9
             // 
@@ -282,6 +366,7 @@
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start the quiz";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // label4
             // 
@@ -291,6 +376,11 @@
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 22;
             this.label4.Text = "28 April 2023";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -319,7 +409,7 @@
             this.Controls.Add(this.plusRightLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.plusLeftLabel);
-            this.Controls.Add(this.timeLeft);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.timeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -338,7 +428,7 @@
         #endregion
 
         private System.Windows.Forms.Label timeLabel;
-        private System.Windows.Forms.Label timeLeft;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label plusLeftLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label plusRightLabel;
@@ -361,6 +451,7 @@
         private System.Windows.Forms.Label timesLeftLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
